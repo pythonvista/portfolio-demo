@@ -1,0 +1,138 @@
+@tailwind base;
+@layer base {
+  html {
+    @apply font-inter;
+    background-color: black;
+    overflow-x: hidden;
+    scroll-behavior: smooth
+  }
+}
+@tailwind components;
+@tailwind utilities;
+
+div.animate span {
+  display: block;
+  transform: translateX(-300px);
+  opacity: 0;
+}
+
+/* MARQUEE ANIMATION START  */
+.marquee-section {
+  position: relative;
+  min-height: 100px;
+}
+
+.marquee-section,
+.marquee-section * {
+  overflow: hidden;
+}
+
+.marquee {
+  white-space: nowrap;
+}
+
+.marquee-div {
+  position: absolute;
+  animation: move-right-to-left linear 12.5s infinite;
+}
+
+@keyframes move-right-to-left {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+/* MARQUEE ANIMATION END  */
+
+nav a:hover {
+  color: #9f40fe;
+}
+
+nav a:first-child {
+  color: #9f40fe;
+}
+
+.hero-sec {
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url(./assets/pexels-skylar-kang-6044198.jpg) center center no-repeat;
+  background-size: cover;
+}
+
+/* TYPING EFFECT  */
+.typing-container {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px;
+
+  #feature-text {
+    word-wrap: break-word;
+  }
+  .input-cursor {
+    display: inline-block;
+    width: 2px;
+    height: 42px;
+    background-color: white;
+    margin-left: 8px;
+    animation: blink 0.6s linear infinite alternate;
+  }
+}
+
+@media (max-width: 768px) {
+  .typing-container .input-cursor {
+    margin-left: 0;
+  }
+}
+
+@keyframes blink {
+  0% {
+    opacity: 1;
+  }
+  40% {
+    opacity: 1;
+  }
+  60% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+/* TYPING EFFECT  */
+
+a.contact {
+  background: linear-gradient(
+    95.14deg,
+    #9f40fe 8.56%,
+    #00ff57b3 71.71%,
+    rgba(255, 255, 255, 0.67) 129.85%
+  );
+}
+
+.eclipse {
+  filter: blur(100px);
+}
+
+.about-me {
+  background: linear-gradient(
+      0deg,
+      rgba(238, 237, 237, 0.1),
+      rgba(238, 237, 237, 0.1)
+    ),
+    linear-gradient(0deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.1));
+}
+
+.skillsets {
+  background: url(./assets/teddy-cuban.png) left no-repeat;
+  background-size: cover;
+  background-size: 350px;
+}
+
+@media (min-width: 768px) {
+  .value:nth-child(odd) {
+    flex-direction: row-reverse;
+  }
+}
