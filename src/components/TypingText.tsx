@@ -3,12 +3,13 @@ import {carousel} from '../utils';
 
 const TypingText = () => {
   const elRef = useRef<HTMLSpanElement>(null);
-  const carouselTexts = [
-    {text: 'Programmer', color: '#00ff57b3'},
-    {text: 'Software Engineer', color: '#9F40FE'},
-    {text: 'Web Developer', color: '#FF9900'}
-  ];
+
   useEffect(() => {
+    const carouselTexts = [
+      {text: 'Programmer', color: '#00ff57b3'},
+      {text: 'Software Engineer', color: '#9F40FE'},
+      {text: 'Web Developer', color: '#FF9900'}
+    ];
     carousel(carouselTexts, elRef);
   }, []);
   return (

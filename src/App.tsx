@@ -1,3 +1,4 @@
+import {useEffect, useState} from 'react';
 import AboutMe from './components/AboutMe';
 import Hero from './components/Hero';
 import ContactMe from './components/ContactMe';
@@ -9,12 +10,35 @@ import phone from './assets/svgs/phone.svg';
 import whatsapp from './assets/svgs/whatsapp.svg';
 import twitter from './assets/svgs/twitter.svg';
 import Header from './components/Header';
+import arrow_up from './assets/svgs/arrowup.svg';
 
 function App() {
+  const [scrolled, setScrolled] = useState(false);
   const socialIcons = [github, facebook, phone, whatsapp, twitter];
+  const scrollToTop = () => {
+    window.scrollTo(0, 0);
+    setScrolled(false);
+  };
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 500) setScrolled(true);
+      else setScrolled(false);
+    };
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, [scrolled]);
 
   return (
     <div className='w-screen min-w-[320px] max-w-[1700px] text-white mx-auto'>
+      <button
+        className={
+          (scrolled ? 'flex' : 'hidden') +
+          ' fixed z-30 w-16 aspect-square bottom-5 right-5 bg-[#9F40FE] items-center justify-center rounded-full'
+        }
+        onClick={scrollToTop}
+      >
+        <img src={arrow_up} alt='go to top' className='w-4/5' />
+      </button>
       <Header />
       <main className='pt-16 sm:pt-0'>
         <Hero />

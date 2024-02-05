@@ -2,6 +2,25 @@ import {useReducer, useEffect} from 'react';
 import {motion, AnimatePresence} from 'framer-motion';
 import './hamburger.css';
 
+const variants = (delay = 0.5) => ({
+  open: {
+    y: 0,
+    opacity: 1,
+    transition: {
+      y: {stiffness: 1000, velocity: -100},
+      delay
+    }
+  },
+  closed: {
+    y: 50,
+    opacity: 0,
+    transition: {
+      y: {stiffness: 1000},
+      delay
+    }
+  }
+});
+
 const Header = () => {
   const nav = [
     'Home',
@@ -13,9 +32,13 @@ const Header = () => {
   ];
   const [navOpen, toggleNavOpen] = useReducer(state => !state, false);
   useEffect(() => {
-    //Lock scroll
     //Add click away listener to close the navbar
-  }, []);
+    function closeDropdown() {
+      toggleNavOpen();
+      document.removeEventListener('click', closeDropdown);
+    }
+    if (navOpen) document.addEventListener('click', closeDropdown);
+  }, [navOpen]);
   return (
     <motion.header
       className={
@@ -27,6 +50,7 @@ const Header = () => {
         closed: {backgroundColor: 'rgb(31 41 55)'}
       }}
       animate={navOpen ? 'open' : 'closed'}
+      onClick={e => e.stopPropagation()}
     >
       {/* Desktop nav  */}
       <nav className='w-max hidden md:flex gap-4 mx-auto'>
@@ -51,14 +75,19 @@ const Header = () => {
       <AnimatePresence>
         {navOpen && (
           <motion.ul
-            className='bg-purple-600 p-5 flex flex-col gap-3 overflow-hidden rounded-b-2xl'
+            className='bg-purple-600 p-5 pt-0 flex flex-col gap-3 overflow-hidden rounded-b-2xl'
             initial={{height: 0, opacity: 0}}
             animate={{height: 'auto', opacity: 1}}
-            exit={{height: 0, opacity: 0}}
+            exit={{height: 0, opacity: 0, transition: {delay: 0.6}}}
             onClick={toggleNavOpen}
           >
             {nav.map((_, i) => (
-              <motion.li key={i}>
+              <motion.li
+                key={i}
+                initial={variants().closed}
+                animate={variants(i * 0.2).open}
+                exit={variants(1 / (i + 1)).closed}
+              >
                 <a href='#'>{_}</a>
               </motion.li>
             ))}
