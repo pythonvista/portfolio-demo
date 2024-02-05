@@ -124,11 +124,8 @@ const AboutMe = () => {
           ))}
         </ul>
         {ValuesData.map((value, i) => (
-          <AnimateSection>
-            <div
-              className='value flex flex-col md:flex-row gap-4 items-center px-16 justify-center'
-              key={i}
-            >
+          <AnimateSection key={i}>
+            <div className='value flex flex-col md:flex-row gap-4 items-center px-16 justify-center'>
               <div className='md:w-2/5'>
                 <h3 className='text-[#9f40fe] font-bold text-2xl mb-3'>
                   {value.heading}

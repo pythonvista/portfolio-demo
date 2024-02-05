@@ -34,6 +34,7 @@ const Header = () => {
   useEffect(() => {
     //Add click away listener to close the navbar
     function closeDropdown() {
+      //!Must be set to close
       toggleNavOpen();
       document.removeEventListener('click', closeDropdown);
     }

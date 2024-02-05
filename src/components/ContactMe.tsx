@@ -7,15 +7,15 @@ export default () => {
       <HeadingStar heading='Contact me' id='contact-me' />
       <div className='flex flex-col md:flex-row p-5 sm:p-10 justify-between'>
         <p className='mb-6 md:mb-10 text-left'>
-          <div className='font-bold text-3xl sm:text-4xl text-[#FFFFFF33] mb-3'>
+          <span className='font-bold text-3xl sm:text-4xl text-[#FFFFFF33] mb-3 block'>
             Let's work together
-          </div>
-          <div className='italic mb-3'>
+          </span>
+          <span className='italic mb-3 block'>
             "Every Innovation started with communication"
-          </div>
-          <div className='mb-3 pr-10'>
+          </span>
+          <span className='mb-3 pr-10 block'>
             Would like to reach out to me? fill the contact form and let's talk
-          </div>
+          </span>
         </p>
         <form
           action=''
