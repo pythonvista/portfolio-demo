@@ -17,7 +17,17 @@ const Header = () => {
     //Add click away listener to close the navbar
   }, []);
   return (
-    <header className='md:py-3 w-full fixed top-0 left-1/2 -translate-x-1/2 z-10 bg-black'>
+    <motion.header
+      className={
+        'md:py-3 w-full fixed top-0 left-1/2 -translate-x-1/2 z-10 bg-gray-800 ' +
+        (navOpen ? 'rounded-b-2xl' : '')
+      }
+      variants={{
+        open: {backgroundColor: 'rgb(147 51 234)'},
+        closed: {backgroundColor: 'rgb(31 41 55)'}
+      }}
+      animate={navOpen ? 'open' : 'closed'}
+    >
       {/* Desktop nav  */}
       <nav className='w-max hidden md:flex gap-4 mx-auto'>
         {nav.map(nav => (
@@ -32,16 +42,16 @@ const Header = () => {
         className={'flex md:hidden hamburger ' + (navOpen ? 'open' : '')}
         onClick={toggleNavOpen}
       >
-        <span></span>
-        <span></span>
-        <span></span>
+        {Array.from({length: 3}).map((_, i) => (
+          <span key={i}></span>
+        ))}
       </button>
 
       {/* Mobile nav  */}
       <AnimatePresence>
         {navOpen && (
           <motion.ul
-            className='bg-purple-600 p-5 flex flex-col gap-3 overflow-hidden'
+            className='bg-purple-600 p-5 flex flex-col gap-3 overflow-hidden rounded-b-2xl'
             initial={{height: 0, opacity: 0}}
             animate={{height: 'auto', opacity: 1}}
             exit={{height: 0, opacity: 0}}
@@ -55,7 +65,7 @@ const Header = () => {
           </motion.ul>
         )}
       </AnimatePresence>
-    </header>
+    </motion.header>
   );
 };
 

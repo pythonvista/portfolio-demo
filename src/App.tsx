@@ -16,7 +16,7 @@ function App() {
   return (
     <div className='w-screen min-w-[320px] max-w-[1700px] text-white mx-auto'>
       <Header />
-      <main className='mt-[4.2rem] sm:mt-0 pt-12 sm:pt-0'>
+      <main className='pt-16 sm:pt-0'>
         <Hero />
         <AboutMe />
         <ContactMe />
