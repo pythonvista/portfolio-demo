@@ -23,7 +23,7 @@ const AboutMe = () => {
           style={{
             transform: inView ? 'translateY(1.5rem)' : 'translateY(0)',
             opacity: inView ? 1 : 0,
-            transition: 'all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1) 0.3s'
+            transition: 'all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1) 0.2s'
           }}
           className='text-center w-4/5 mx-auto p-4 py-14 rounded-2xl border-4 border-[rgba(255,255,255,0.1)] about-me'
         >

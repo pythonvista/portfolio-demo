@@ -19,7 +19,7 @@ const Header = () => {
   return (
     <motion.header
       className={
-        'md:py-3 w-full fixed top-0 left-1/2 -translate-x-1/2 z-10 bg-gray-800 ' +
+        'md:py-3 w-full fixed top-0 left-1/2 -translate-x-1/2 z-20 bg-gray-800 ' +
         (navOpen ? 'rounded-b-2xl' : '')
       }
       variants={{

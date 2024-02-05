@@ -22,7 +22,7 @@ export default () => {
         animate='visible'
         initial='hidden'
       >
-        <img src={Vector} alt='icon' className='w-5 z-10 absolute -top-6 left-1/2' />
+        <img src={Vector} alt='icon' className='hidden sm:block w-5 z-10 absolute -top-6 left-1/2' />
         {/* Moving text  */}
         <TypingText />
         <p className='max-w-[650px] mb-5'>
