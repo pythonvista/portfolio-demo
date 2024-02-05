@@ -30,11 +30,14 @@ const Header = () => {
     'My values',
     'Contact me'
   ];
-  const [navOpen, toggleNavOpen] = useReducer(state => !state, false);
+  const [navOpen, toggleNavOpen] = useReducer(
+    (state: boolean, close: string) => (close ? false : !state),
+    false
+  );
   useEffect(() => {
     //Add click away listener to close the navbar
     function closeDropdown() {
-      toggleNavOpen();
+      toggleNavOpen('close');
       document.removeEventListener('click', closeDropdown);
     }
     if (navOpen) document.addEventListener('click', closeDropdown);
@@ -64,7 +67,7 @@ const Header = () => {
       {/* Navigation button  */}
       <button
         className={'flex md:hidden hamburger ' + (navOpen ? 'open' : '')}
-        onClick={toggleNavOpen}
+        onClick={() => toggleNavOpen('default')}
       >
         {Array.from({length: 3}).map((_, i) => (
           <span key={i}></span>
@@ -79,7 +82,7 @@ const Header = () => {
             initial={{height: 0, opacity: 0}}
             animate={{height: 'auto', opacity: 1}}
             exit={{height: 0, opacity: 0, transition: {delay: 0.6}}}
-            onClick={toggleNavOpen}
+            onClick={() => toggleNavOpen('default')}
           >
             {nav.map((_, i) => (
               <motion.li

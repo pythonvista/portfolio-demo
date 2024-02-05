@@ -33,7 +33,7 @@ function App() {
       <button
         className={
           (scrolled ? 'flex' : 'hidden') +
-          ' fixed z-30 w-16 aspect-square bottom-5 right-5 bg-[#9F40FE] items-center justify-center rounded-full'
+          ' fixed z-30 w-12 aspect-square bottom-5 right-5 bg-[#9F40FE] items-center justify-center rounded-full'
         }
         onClick={scrollToTop}
       >
