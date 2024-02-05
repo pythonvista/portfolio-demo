@@ -43,6 +43,7 @@ const Header = () => {
       }
     }
     if (navOpen) document.addEventListener('click', closeDropdown);
+    return () => document.removeEventListener('click', closeDropdown);
   }, [navOpen]);
   return (
     <motion.header
