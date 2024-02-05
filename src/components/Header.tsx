@@ -14,10 +14,7 @@ const variants = (delay = 0.5) => ({
   closed: {
     y: 50,
     opacity: 0,
-    transition: {
-      y: {stiffness: 1000},
-      delay
-    }
+    transition: {delay}
   }
 });
 
@@ -86,7 +83,7 @@ const Header = () => {
               } p-5 pt-2 md:hidden flex flex-col gap-3 overflow-hidden rounded-b-2xl`}
               initial={{height: 0, opacity: 0}}
               animate={{height: 'auto', opacity: 1}}
-              exit={{height: 0, opacity: 0, transition: {delay: 0.6}}}
+              exit={{height: 0, opacity: 0, transition: {delay: 0.4}}}
               onClick={toggleNavOpen}
             >
               {nav.map((_, i) => (
