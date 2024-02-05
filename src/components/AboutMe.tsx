@@ -11,7 +11,7 @@ import {useInView} from 'framer-motion';
 
 const AboutMe = () => {
   const aboutMeRef = useRef<HTMLDivElement | null>(null);
-  const inView = useInView(aboutMeRef);
+  const inView = useInView(aboutMeRef, {once: true});
   return (
     <>
       <section className='min-h-screen relative pt-20 overflow-hidden mb-10'>

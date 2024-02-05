@@ -17,7 +17,7 @@ const Header = () => {
     //Add click away listener to close the navbar
   }, []);
   return (
-    <header className='py-2 sm:py-0 sm:pt-3 w-full fixed top-0 left-1/2 -translate-x-1/2 z-10 bg-black'>
+    <header className='md:py-3 w-full fixed top-0 left-1/2 -translate-x-1/2 z-10 bg-black'>
       {/* Desktop nav  */}
       <nav className='w-max hidden md:flex gap-4 mx-auto'>
         {nav.map(nav => (

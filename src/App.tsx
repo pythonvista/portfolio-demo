@@ -36,13 +36,13 @@ function App() {
           <p className='mb-3'>
             Feel free to reach me on any of the following handles
           </p>
-          <div className='w-2/5 mb-3 flex gap-2'>
+          <div className='w-2/5 mb-3 flex gap-8'>
             {socialIcons.map((svg, i) => (
               <img src={svg} alt='' key={i} className='w-1/5' />
             ))}
           </div>
         </div>
-        <p className='w-full text-sm sm:text-base text-center text-[#FFFFFF66]'>
+        <p className='w-full text-sm sm:text-base text-center text-[#FFFFFF66] mb-3'>
           Copywright &copy; {new Date().getFullYear()} | Designed & Developed by
           Michael Olofin
         </p>
