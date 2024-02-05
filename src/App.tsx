@@ -35,7 +35,10 @@ function App() {
           (scrolled ? 'flex' : 'hidden') +
           ' fixed z-30 w-12 aspect-square bottom-5 right-5 bg-[#9F40FE] items-center justify-center rounded-full'
         }
-        onClick={scrollToTop}
+        onClick={e => {
+          e.stopPropagation();
+          scrollToTop();
+        }}
       >
         <img src={arrow_up} alt='go to top' className='w-4/5' />
       </button>
