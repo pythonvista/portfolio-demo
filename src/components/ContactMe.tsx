@@ -1,5 +1,4 @@
 import HeadingStar from './HeadingStar';
-// background: #FFFFFF33;
 
 //eslint-disable-next-line
 export default () => {
@@ -31,7 +30,7 @@ export default () => {
               type='text'
               id='name'
               required
-              className='outline-none appearance-none block bg-black'
+              className='outline-none appearance-none block bg-gray-900'
             />
           </div>
 
@@ -43,7 +42,7 @@ export default () => {
               type='email'
               id='email'
               required
-              className='outline-none appearance-none block bg-black'
+              className='outline-none appearance-none block bg-gray-900'
             />
           </div>
 
@@ -55,7 +54,7 @@ export default () => {
               id='message'
               required
               rows={4}
-              className='outline-none w-full appearance-none block bg-black'
+              className='outline-none w-full appearance-none block bg-gray-900'
             />
           </div>
 
