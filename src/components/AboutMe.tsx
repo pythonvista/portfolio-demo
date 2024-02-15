@@ -7,23 +7,23 @@ import HeadingStar from './HeadingStar';
 import skill_logo from '../assets/svgs/skill-logo.svg';
 import AnimateSection from './AnimateSection';
 import {useRef} from 'react';
-import {useInView} from 'framer-motion';
+import {useInView, motion} from 'framer-motion';
 
 const AboutMe = () => {
   const aboutMeRef = useRef<HTMLDivElement | null>(null);
-  const inView = useInView(aboutMeRef, {once: true});
+  const inView = useInView(aboutMeRef);
   return (
     <>
       <section className='min-h-screen relative pt-20 overflow-hidden mb-10'>
         <div className='eclipse w-[300px] rounded-full aspect-square bg-[#00ff574d] absolute top-[250px] -left-[150px]' />
         <div className='eclipse w-[300px] rounded-full aspect-square bg-[#9F40FECC] absolute -top-[50px] -right-[150px]' />
 
-        <div
+        <motion.div
           ref={aboutMeRef}
           style={{
-            transform: inView ? 'translateY(1.5rem)' : 'translateY(0)',
+            transform: inView ? 'none' : 'translateY(-1.5rem)',
             opacity: inView ? 1 : 0,
-            transition: 'all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1) 0.2s'
+            transition: 'all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1) 0.3s'
           }}
           className='text-center w-4/5 mx-auto p-4 py-14 rounded-2xl border-4 border-[rgba(255,255,255,0.1)] about-me'
         >
@@ -37,7 +37,7 @@ const AboutMe = () => {
             every project, aiming to create software that not only meets but
             exceeds expectations. Let's build the future together!"
           </p>
-        </div>
+        </motion.div>
 
         <img src={rounded} alt='icon' className='w-14 ml-auto mb-14' />
         <HeadingStar heading='My goals' />
