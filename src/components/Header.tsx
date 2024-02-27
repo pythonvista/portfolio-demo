@@ -91,7 +91,7 @@ const Header = () => {
                 <motion.li
                   key={i}
                   initial={variants().closed}
-                  animate={variants(i * 0.2).open}
+                  animate={variants(i * 0.08).open}
                   exit={variants(1 / (i + 1)).closed}
                 >
                   <a href='#'>{_}</a>
