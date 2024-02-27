@@ -7,7 +7,7 @@ import HeadingStar from './HeadingStar';
 import skill_logo from '../assets/svgs/skill-logo.svg';
 import AnimateSection from './AnimateSection';
 import {useRef} from 'react';
-import {useInView, motion} from 'framer-motion';
+import {useInView} from 'framer-motion';
 
 const AboutMe = () => {
   const aboutMeRef = useRef<HTMLDivElement | null>(null);
@@ -18,10 +18,10 @@ const AboutMe = () => {
         <div className='eclipse w-[300px] rounded-full aspect-square bg-[#00ff574d] absolute top-[250px] -left-[150px]' />
         <div className='eclipse w-[300px] rounded-full aspect-square bg-[#9F40FECC] absolute -top-[50px] -right-[150px]' />
 
-        <motion.div
+        <div
           ref={aboutMeRef}
           style={{
-            transform: inView ? 'none' : 'translateY(-1.5rem)',
+            transform: inView ? 'none' : 'translateY(1.5rem)',
             opacity: inView ? 1 : 0,
             transition: 'all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1) 0.3s'
           }}
@@ -37,7 +37,7 @@ const AboutMe = () => {
             every project, aiming to create software that not only meets but
             exceeds expectations. Let's build the future together!"
           </p>
-        </motion.div>
+        </div>
 
         <img src={rounded} alt='icon' className='w-14 ml-auto mb-14' />
         <HeadingStar heading='My goals' />

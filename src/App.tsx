@@ -40,7 +40,7 @@ function App() {
           scrollToTop();
         }}
       >
-        <img src={arrow_up} alt='go to top' className='w-4/5' />
+        <img src={arrow_up} alt='go to top' className='w-3/5' />
       </button>
       <Header />
       <main className='pt-16 sm:pt-0'>
