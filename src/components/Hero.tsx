@@ -2,6 +2,7 @@ import {motion} from 'framer-motion';
 import Me from '../assets/images/hero-img.png';
 import Vector from '../assets/svgs/orange-star.svg';
 import TypingText from './TypingText';
+import {memo} from 'react';
 const item = {
   hidden: {y: 40, opacity: 0},
   visible: {
@@ -11,7 +12,7 @@ const item = {
 };
 
 // eslint-disable-next-line
-export default () => {
+export default memo(() => {
   const animatedText = 'Transforming ideas into powerful software solutions';
   return (
     <section className='hero-sec relative min-h-[100vh] px-3 md:px-10 flex flex-col sm:flex-row items-center justify-center overflow-hidden'>
@@ -22,7 +23,11 @@ export default () => {
         animate='visible'
         initial='hidden'
       >
-        <img src={Vector} alt='icon' className='hidden sm:block w-5 z-10 absolute -top-6 left-1/2' />
+        <img
+          src={Vector}
+          alt='icon'
+          className='hidden sm:block w-5 z-10 absolute -top-6 left-1/2'
+        />
         {/* Moving text  */}
         <TypingText />
         <p className='max-w-[650px] mb-5'>
@@ -65,4 +70,4 @@ export default () => {
       </aside>
     </section>
   );
-};
+});

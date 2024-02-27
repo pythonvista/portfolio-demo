@@ -1,4 +1,4 @@
-import {useReducer, useEffect, useRef} from 'react';
+import {useReducer, useEffect, useRef, memo} from 'react';
 import {motion, AnimatePresence} from 'framer-motion';
 import './hamburger.css';
 
@@ -18,7 +18,7 @@ const variants = (delay = 0.5) => ({
   }
 });
 
-const Header = () => {
+const Header = memo(() => {
   const headerRef = useRef<HTMLDivElement>(null);
   const nav = [
     'Home',
@@ -103,6 +103,6 @@ const Header = () => {
       </div>
     </motion.header>
   );
-};
+});
 
 export default Header;

@@ -1,4 +1,4 @@
-import {useRef} from 'react';
+import {useRef, memo} from 'react';
 import {useInView} from 'framer-motion';
 
 interface AnimateSectionProps extends React.HTMLAttributes<HTMLDivElement> {
@@ -6,7 +6,11 @@ interface AnimateSectionProps extends React.HTMLAttributes<HTMLDivElement> {
   className?: string;
 }
 
-function AnimateSection({children, className, ...props}: AnimateSectionProps) {
+const AnimateSection = memo(function ({
+  children,
+  className,
+  ...props
+}: AnimateSectionProps) {
   const ref = useRef<HTMLDivElement | null>(null);
   const isInView = useInView(ref);
 
@@ -23,6 +27,6 @@ function AnimateSection({children, className, ...props}: AnimateSectionProps) {
       </span>
     </div>
   );
-}
+});
 
 export default AnimateSection;

@@ -1,3 +1,4 @@
+import {memo} from 'react';
 import {ValuesData} from '../data';
 import rounded from '../assets/svgs/round.svg';
 import pear from '../assets/svgs/pear.svg';
@@ -9,7 +10,7 @@ import AnimateSection from './AnimateSection';
 import {useRef} from 'react';
 import {useInView} from 'framer-motion';
 
-const AboutMe = () => {
+const AboutMe = memo(() => {
   const aboutMeRef = useRef<HTMLDivElement | null>(null);
   const inView = useInView(aboutMeRef);
   return (
@@ -143,5 +144,6 @@ const AboutMe = () => {
       </section>
     </>
   );
-};
+});
+
 export default AboutMe;

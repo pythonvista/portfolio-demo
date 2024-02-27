@@ -1,7 +1,8 @@
+import {memo} from 'react';
 import HeadingStar from './HeadingStar';
 
 //eslint-disable-next-line
-export default () => {
+export default memo(() => {
   return (
     <section>
       <HeadingStar heading='Contact me' id='contact-me' />
@@ -65,4 +66,4 @@ export default () => {
       </div>
     </section>
   );
-};
+});
