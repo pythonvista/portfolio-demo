@@ -20,21 +20,14 @@ const variants = (delay = 0.5) => ({
 
 const Header = memo(() => {
   const headerRef = useRef<HTMLDivElement>(null);
-  const nav = [
-    'Home',
-    'About me',
-    'My goal',
-    'My skillsets',
-    'My values',
-    'Contact me'
-  ];
+  const nav = ['Home', 'About', 'Projects', 'Skills', 'Contact'];
   const [navOpen, toggleNavOpen] = useReducer(state => !state, false);
   useEffect(() => {
     //resize event listener
     // window.addEventListener('resize', () => {
     //   if (window.innerHeight < 768 && navOpen) toggleNavOpen();
     // });
-    //Add click away listener to close the navbar
+    //click away listener to close the navbar
     function closeDropdown() {
       //!function must close the navbar
       if (navOpen) {
@@ -57,7 +50,7 @@ const Header = memo(() => {
     >
       <div ref={headerRef}>
         {/* Desktop nav  */}
-        <nav className='w-max hidden md:flex gap-4 mx-auto'>
+        <nav className='w-max hidden md:flex ml-auto mr-4 gap-4'>
           {nav.map(nav => (
             <a href='#' key={nav}>
               {nav}

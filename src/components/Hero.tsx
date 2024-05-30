@@ -3,6 +3,7 @@ import Me from '../assets/images/hero-img.png';
 import Vector from '../assets/svgs/orange-star.svg';
 import TypingText from './TypingText';
 import {memo} from 'react';
+
 const item = {
   hidden: {y: 40, opacity: 0},
   visible: {
@@ -15,11 +16,11 @@ const item = {
 export default memo(() => {
   const animatedText = 'Transforming ideas into powerful software solutions';
   return (
-    <section className='hero-sec relative min-h-[100vh] px-3 md:px-10 flex flex-col sm:flex-row items-center justify-center overflow-hidden'>
+    <>
       <motion.div
-        className='w-[85%] sm:w-3/5 relative'
+        className='w-[95%] sm:w-3/5 relative'
         variants={item}
-        transition={{duration: 1.5}}
+        transition={{duration: 1}}
         animate='visible'
         initial='hidden'
       >
@@ -68,6 +69,6 @@ export default memo(() => {
           </div>
         </div>
       </aside>
-    </section>
+    </>
   );
 });
