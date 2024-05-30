@@ -4,11 +4,11 @@ import App from './App.tsx';
 import './index.css';
 
 //Production
-// ReactDOM.createRoot(document.getElementById('root')!).render(
-//   <React.StrictMode>
-//     <App />
-//   </React.StrictMode>
-// );
+ReactDOM.createRoot(document.getElementById('root')!).render(
+  <React.StrictMode>
+    <App />
+  </React.StrictMode>
+);
 
 //Development
-ReactDOM.createRoot(document.getElementById('root')!).render(<App />);
+// ReactDOM.createRoot(document.getElementById('root')!).render(<App />);

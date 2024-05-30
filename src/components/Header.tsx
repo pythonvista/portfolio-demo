@@ -50,7 +50,7 @@ const Header = memo(() => {
     >
       <div ref={headerRef}>
         {/* Desktop nav  */}
-        <nav className='w-max hidden md:flex ml-auto mr-4 gap-4'>
+        <nav className='w-max hidden md:flex mx-auto gap-4'>
           {nav.map(nav => (
             <a href='#' key={nav}>
               {nav}

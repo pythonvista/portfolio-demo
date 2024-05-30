@@ -12,7 +12,6 @@ import Skills from './components/Skills';
 function App() {
   //Todo Create a state that tracks which element in view
   //Todo Pass this state into the Header
-  // const
   const [scrolled, setScrolled] = useState(false);
   const scrollToTop = () => {
     window.scrollTo(0, 0);
