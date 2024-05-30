@@ -1,5 +1,6 @@
 import HeadingStar from './HeadingStar';
 import {Frontend, Backend, Database, Teamwork, Testing} from './SVGs';
+import {Solutions} from './SVGs';
 
 type Skill = {
   Icon: React.FC<React.SVGProps<SVGSVGElement>>;
@@ -37,6 +38,12 @@ const data: Skill[] = [
     title: 'Teamwork and collaboration',
     description:
       'With strong communication and adaptability, I actively contribute to team efforts, share ideas, and collaborate effectively with designers and other developers'
+  },
+  {
+    Icon: Solutions,
+    title: 'Complex Problem-solving',
+    description:
+      'I tackle complex software development challenges with innovative solutions and a logical approach. By debugging issues, optimizing code, and improving functionality, I ensure high-quality results'
   }
 ];
 

@@ -1,15 +1,14 @@
 import pear from '../assets/svgs/pear.svg';
-import github from '../assets/svgs/github.svg';
-import facebook from '../assets/svgs/facebook.svg';
-import phone from '../assets/svgs/phone.svg';
-import whatsapp from '../assets/svgs/whatsapp.svg';
-import twitter from '../assets/svgs/twitter.svg';
+import {Github, Mail, Phone, Whatsapp} from './SVGs';
 
-const socialIcons = [github, facebook, phone, whatsapp, twitter];
+type Contact = {link: string; icon: React.FC<React.SVGProps<SVGSVGElement>>};
 
-const contacts: {link: string; svg: string}[] = [];
-
-//Whatsapp, Phone, Email
+const contacts: Contact[] = [
+  {link: 'https://wa.me/+2347033165100', icon: Whatsapp},
+  {link: 'tel+2347033165100', icon: Phone},
+  {link: 'mailto:damzymike@gmail.com', icon: Mail},
+  {link: 'https://github.com/damzymichael', icon: Github}
+];
 
 const Footer = () => {
   return (
@@ -23,8 +22,10 @@ const Footer = () => {
           Feel free to reach me on any of the following handles
         </p>
         <div className='w-2/5 mb-3 flex gap-4 sm:gap-5'>
-          {socialIcons.map((svg, i) => (
-            <img src={svg} alt='' key={i} className='w-[15%]' />
+          {contacts.map((contact, i) => (
+            <a href={contact.link} key={i} target='_blank'>
+              <contact.icon />
+            </a>
           ))}
         </div>
       </div>

@@ -67,12 +67,6 @@ function App() {
 
         <hr />
 
-        {/* <section className='pt-10'>
-          <MyValues />
-        </section> */}
-
-        <hr />
-
         <section className='pt-10'>
           <ContactMe />
         </section>
