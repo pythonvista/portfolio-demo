@@ -44,29 +44,35 @@ function App() {
       <Header />
 
       <main className='pt-16 sm:pt-0'>
-        <section className='hero-sec relative min-h-[100vh] px-3 md:px-10 flex flex-col sm:flex-row items-center justify-center overflow-hidden'>
+        <section
+          className='hero-sec relative min-h-[100vh] px-3 md:px-10 flex flex-col sm:flex-row items-center justify-center overflow-hidden'
+          id='home'
+        >
           <Hero />
         </section>
 
-        <section className='h-screen relative overflow-hidden mb-10'>
+        <section className='h-screen relative overflow-hidden mb-10' id='about'>
           <AboutMe />
         </section>
 
         <hr />
 
-        <section className='projects min-h-screen relative pt-10 pb-14 overflow-hidden'>
+        <section
+          className='projects min-h-screen relative pt-10 pb-14 overflow-hidden'
+          id='projects'
+        >
           <Projects />
         </section>
 
         <hr />
 
-        <section id='services' className='mt-10'>
+        <section id='skills' className='mt-10'>
           <Skills />
         </section>
 
         <hr />
 
-        <section className='pt-10'>
+        <section className='pt-10' id='contact'>
           <ContactMe />
         </section>
       </main>

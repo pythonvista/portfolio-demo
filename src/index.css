@@ -51,9 +51,11 @@ nav a:hover {
   color: #9f40fe;
 }
 
+/*
 nav a:first-child {
   color: #9f40fe;
 }
+*/
 
 .hero-sec {
   background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
