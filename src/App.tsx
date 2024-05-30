@@ -8,7 +8,6 @@ import arrow_up from './assets/svgs/arrowup.svg';
 import Projects from './components/Projects';
 import Footer from './components/Footer';
 import Skills from './components/Skills';
-import {MyValues} from './components/Components';
 
 function App() {
   //Todo Create a state that tracks which element in view
@@ -68,9 +67,9 @@ function App() {
 
         <hr />
 
-        <section className='pt-10'>
+        {/* <section className='pt-10'>
           <MyValues />
-        </section>
+        </section> */}
 
         <hr />
 

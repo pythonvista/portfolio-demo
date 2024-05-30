@@ -1,5 +1,5 @@
 import HeadingStar from './HeadingStar';
-import ArrowDiagonal from './ArrowDiagonal';
+import { ArrowDiagonal } from './SVGs';
 import onstord from '../assets/images/onstord_preview.gif';
 import tobi from '../assets/images/tobi_preview.gif';
 import heartisan from '../assets/images/heartisan_preview.gif';
@@ -37,7 +37,7 @@ const data: Project[] = [
   {
     imageSrc: oculus,
     title: 'Oculus',
-    description: 'Demo landing page for a commercial AI landing page',
+    description: 'A landing page for a commercial AI website',
     url: 'https://oculus-sigma.vercel.app'
   }
 ];
@@ -67,7 +67,7 @@ function Projects() {
                 </p>
               </span>
               <a
-                className='bg-[#9F40FE] p-2 rounded-full cursor-pointer'
+                className='bg-[#9F40FE] p-2 rounded-full ml-auto cursor-pointer'
                 target='_blank'
                 href={url}
               >

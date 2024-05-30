@@ -1,7 +1,6 @@
 import HeadingStar from './HeadingStar';
 import AnimateSection from './AnimateSection';
 import {ValuesData} from '../data';
-import skill_logo from '../assets/svgs/skill-logo.svg';
 import pear from '../assets/svgs/pear.svg';
 import arrow from '../assets/svgs/arrow.svg';
 import flipped_image from '../assets/images/flipped-image.png';
@@ -76,38 +75,5 @@ export const MyValues = () => {
         </AnimateSection>
       ))}
     </section>
-  );
-};
-
-export const Services = () => {
-  return (
-    <>
-      <HeadingStar heading='Services' />
-      <div className='flex flex-wrap gap-4 justify-center relative overflow-hidden py-5'>
-        {Array.from({length: 6}).map((_, i) => (
-          <div
-            key={i}
-            className='w-11/12 sm:w-[45%] md:w-[30%] bg-[#FFFFFF1A] rounded-lg p-5'
-          >
-            <div className='border border-[#9F40FE] border-dashed rounded-full w-max mx-auto aspect-square flex items-center justify-center mb-3'>
-              {/* Add dynamic value to alt text  */}
-              <img src={skill_logo} alt='logo' className='w-3/5' />
-            </div>
-            <h2 className='uppercase font-semibold mb-3'>
-              Front-end development
-            </h2>
-            <p className='mb-3'>
-              I specialize in creating visually appealing and user-friendly
-              interfaces for websites. I transform design concepts into
-              interactive and responsive code, ensuring a seamless user
-              experience.
-            </p>
-            <button className='bg-[#9F40FE] p-2 rounded-md'>Learn more</button>
-          </div>
-        ))}
-        {/* bottom eclipse  */}
-        <div className='eclipse w-[300px] rounded-full aspect-square bg-[#9F40FE80] absolute -bottom-[100px] right-1/2 translate-x-1/2' />
-      </div>
-    </>
   );
 };

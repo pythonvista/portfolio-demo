@@ -1,20 +1,42 @@
 import HeadingStar from './HeadingStar';
-import frontend from '../assets/svgs/frontend.svg';
-import backend from '../assets/svgs/backend.svg';
+import {Frontend, Backend, Database, Teamwork, Testing} from './SVGs';
 
-type Skill = {icon: string; title: string; description: string};
+type Skill = {
+  Icon: React.FC<React.SVGProps<SVGSVGElement>>;
+  title: string;
+  description: string;
+};
+
 const data: Skill[] = [
   {
-    icon: frontend,
+    Icon: Frontend,
     title: 'Frontend development',
     description:
       'Creating visually appealing and user friendly interfaces for websites. I transform design concepts into interactive and responsive code, ensuring a seamless user experience.'
   },
   {
-    icon: backend,
+    Icon: Backend,
     title: 'Backend development',
     description:
-      'Focus on creating and maintaining the server-side logic and APIs that power web applications. I build scalable architectures, handle server management, and implement security measures, optimized performance, and ensured seamless communication between clients and servers'
+      'Focus on creating and maintaining APIs that power web applications. I build scalable architectures, handle server management, and implement security measures, optimize performance, and ensure seamless communication between clients and servers'
+  },
+  {
+    Icon: Database,
+    title: 'Database management',
+    description:
+      'Designing, implementing, and maintaining databases to ensure data integrity and accessibility. Skilled in SQL and NoSQL technologies, I optimize queries and manage data storage solutions'
+  },
+  {
+    Icon: Testing,
+    title: 'Perfomance Testing',
+    description:
+      'Proficient in performance testing, I ensure web applications are optimized for speed, scalability, and reliability. Utilizing tools like Cypress and Playwright, I optimize code and enhance user experience'
+  },
+  {
+    Icon: Teamwork,
+    title: 'Teamwork and collaboration',
+    description:
+      'With strong communication and adaptability, I actively contribute to team efforts, share ideas, and collaborate effectively with designers and other developers'
   }
 ];
 
@@ -23,16 +45,16 @@ const Skills = () => {
     <>
       <HeadingStar heading='Skills' />
       <div className='flex flex-wrap gap-4 justify-center relative overflow-hidden py-5'>
-        {data.map(({icon, title, description}, i) => (
+        {data.map(({Icon, title, description}, i) => (
           <div
             key={i}
             className='w-11/12 sm:w-[45%] md:w-[30%] bg-[#FFFFFF1A] rounded-lg p-5'
           >
-            <div className='border border-[#9F40FE] border-dashed rounded-full w-max mx-auto aspect-square flex items-center justify-center mb-3'>
-              <img src={icon} alt='logo' className='w-3/5' />
+            <div className='border border-[#9F40FE] p-2 border-dashed rounded-full w-max flex items-center justify-center mb-3'>
+              <Icon />
             </div>
-            <h2 className='uppercase font-semibold mb-3'>{title}</h2>
-            <p className='mb-3'>{description}</p>
+            <h2 className='uppercase font-semibold mb-3 text-sm'>{title}</h2>
+            <p className='mb-3 text-xs'>{description}</p>
           </div>
         ))}
         {/* bottom eclipse  */}
