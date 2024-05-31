@@ -5,7 +5,7 @@ type Contact = {link: string; icon: React.FC<React.SVGProps<SVGSVGElement>>};
 
 const contacts: Contact[] = [
   {link: 'https://wa.me/+2347033165100', icon: Whatsapp},
-  {link: 'tel+2347033165100', icon: Phone},
+  {link: 'tel:+2347033165100', icon: Phone},
   {link: 'mailto:damzymike@gmail.com', icon: Mail},
   {link: 'https://github.com/damzymichael', icon: Github}
 ];
