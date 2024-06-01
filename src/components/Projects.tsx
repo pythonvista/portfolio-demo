@@ -1,11 +1,10 @@
-import {useEffect} from 'react';
 import HeadingStar from './HeadingStar';
 import {ArrowDiagonal} from './SVGs';
 import onstord from '../assets/images/onstord_preview.gif';
 import tobi from '../assets/images/tobi_preview.gif';
 import heartisan from '../assets/images/heartisan_preview.gif';
 import oculus from '../assets/images/oculus.gif';
-import {useAnimate, stagger} from 'framer-motion';
+import {motion} from 'framer-motion';
 
 type Project = {
   imageSrc: string;
@@ -44,29 +43,31 @@ const data: Project[] = [
   }
 ];
 
+const variants = {
+  initial: {opacity: 0, y: 150},
+  animate: (index: number) => ({
+    opacity: 1,
+    y: 0,
+    transition: {delay: index * 0.1}
+  })
+};
+
 function Projects() {
-  const [scope, animate] = useAnimate();
-  useEffect(() => {
-    animate(
-      '.project',
-      {x: [0, 20, 0], opacity: [1, 0, 1]},
-      {delay: stagger(0.2), duration: 0.5}
-    );
-  });
   return (
     <>
       <HeadingStar heading='Projects' />
       <h3 className='font-semibold text-xl text-center mb-5 sm:mb-10'>
         Take a look at some of my <span className='text-[#00FF57]'>work</span>
       </h3>
-
-      <div
-        ref={scope}
-        className='pContainer flex flex-wrap gap-3 sm:gap-10 justify-center relative'
-      >
+      <div className='pContainer flex flex-wrap gap-5 sm:gap-10 justify-center relative'>
         {data.map(({imageSrc, title, description, url}, i) => (
-          <div
-            className='project w-11/12 sm:w-[45%] max-w-[500px] bg-[#FFFFFF1A] rounded-lg overflow-hidden mb-3 pb-3'
+          <motion.div
+            variants={variants}
+            initial='initial'
+            whileInView='animate'
+            viewport={{once: true}}
+            custom={i}
+            className='project w-11/12 sm:w-[45%] max-w-[500px] bg-[#FFFFFF1A] rounded-lg overflow-hidden pb-3'
             key={i}
           >
             <div className='max-h-52 overflow-hidden'>
@@ -87,7 +88,7 @@ function Projects() {
                 <ArrowDiagonal />
               </a>
             </div>
-          </div>
+          </motion.div>
         ))}
       </div>
     </>

@@ -1,6 +1,7 @@
 import HeadingStar from './HeadingStar';
 import {Frontend, Backend, Database, Teamwork, Testing} from './SVGs';
 import {Solutions} from './SVGs';
+import {motion} from 'framer-motion';
 
 type Skill = {
   Icon: React.FC<React.SVGProps<SVGSVGElement>>;
@@ -47,13 +48,27 @@ const data: Skill[] = [
   }
 ];
 
+const variants = {
+  initial: {opacity: 0, x: -150},
+  animate: (index: number) => ({
+    opacity: 1,
+    x: 0,
+    transition: {delay: index * 0.1}
+  })
+};
+
 const Skills = () => {
   return (
     <>
       <HeadingStar heading='Skills' />
       <div className='flex flex-wrap gap-4 justify-center relative overflow-hidden py-5'>
         {data.map(({Icon, title, description}, i) => (
-          <div
+          <motion.div
+            variants={variants}
+            initial='initial'
+            whileInView='animate'
+            viewport={{once: true, margin: '-200px'}}
+            custom={i}
             key={i}
             className='w-11/12 sm:w-[45%] md:w-[30%] bg-[#FFFFFF1A] rounded-lg p-5'
           >
@@ -62,7 +77,7 @@ const Skills = () => {
             </div>
             <h2 className='uppercase font-semibold mb-3 text-sm'>{title}</h2>
             <p className='mb-3 text-xs'>{description}</p>
-          </div>
+          </motion.div>
         ))}
         {/* bottom eclipse  */}
         <div className='eclipse w-[300px] rounded-full aspect-square bg-[#9F40FE80] absolute -bottom-[100px] right-1/2 translate-x-1/2' />
