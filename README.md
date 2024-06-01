@@ -12,13 +12,13 @@ A web application for the ordering handyman services for repairs, rennovations a
 ### [Tobi Closet](https://tc-comm-full.vercel.app)
 E-commerce web application for the sale of quality thrift clothing
 
-Skills
+## Skills
 - Programming Languages: Javascript, Typescript Python, PHP.
 - Frameworks and Libraries: React, NextJS, NodeJS.
 - Tools and Platforms: List of development tools, platforms, and environments you work with.
 - Other Skills: Any additional relevant skills, such as problem-solving, performance testing, and teamwork.
 
-Contact
+## Contact
 Feel free to reach out if you have any questions or would like to collaborate on a project.
 - Email: [damzymike@gmail.com]()
 - LinkedIn: [Your LinkedIn Profile]
