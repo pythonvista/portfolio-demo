@@ -17,9 +17,9 @@ Skills
 - Frameworks and Libraries: React, NextJS, NodeJS.
 - Tools and Platforms: List of development tools, platforms, and environments you work with.
 - Other Skills: Any additional relevant skills, such as problem-solving, performance testing, and teamwork.
+
 Contact
 Feel free to reach out if you have any questions or would like to collaborate on a project.
-
-Email: [damzymike@gmail.com]()
-LinkedIn: [Your LinkedIn Profile]
-Website: [Your Website or Portfolio URL]
+- Email: [damzymike@gmail.com]()
+- LinkedIn: [Your LinkedIn Profile]
+- Website: [Your Website or Portfolio URL]
