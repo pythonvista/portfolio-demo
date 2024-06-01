@@ -33,7 +33,7 @@ const data: Project[] = [
     title: 'Heartisan',
     description:
       'A web application for the ordering handyman services for repairs, rennovations and constructions',
-    url: 'https://heartisan-clients.vercel.app/'
+    url: 'https://heartisan-clients.vercel.app'
   },
   {
     imageSrc: oculus,
