@@ -57,9 +57,9 @@ const Header = memo(() => {
             </a>
           ))}
         </nav>
-
         {/* Navigation button  */}
         <button
+          id='navButton'
           className={'flex md:hidden hamburger ' + (navOpen ? 'open' : '')}
           onClick={toggleNavOpen}
         >
@@ -67,8 +67,8 @@ const Header = memo(() => {
             <span key={i}></span>
           ))}
         </button>
-
         {/* Mobile nav  */}
+        {/* Wrong use of variants  */}
         <AnimatePresence>
           {navOpen && (
             <motion.ul
@@ -77,18 +77,19 @@ const Header = memo(() => {
               } p-5 pt-2 md:hidden flex flex-col gap-3 overflow-hidden rounded-b-2xl`}
               initial={{height: 0, opacity: 0}}
               animate={{height: 'auto', opacity: 1}}
-              exit={{height: 0, opacity: 0, transition: {delay: 0.4}}}
-              onClick={toggleNavOpen}
+              exit={{height: 0, opacity: 0, transition: {delay: 0.2}}}
             >
-              {nav.map((_, i) => (
-                <motion.li
+              {nav.map((nav, i) => (
+                <motion.a
+                  className='text-left'
                   key={i}
+                  href={'#' + nav.toLowerCase()}
                   initial={variants().closed}
                   animate={variants(i * 0.08).open}
                   exit={variants(1 / (i + 1)).closed}
                 >
-                  <a href='#'>{_}</a>
-                </motion.li>
+                  {nav}
+                </motion.a>
               ))}
             </motion.ul>
           )}
