@@ -61,7 +61,7 @@ const Skills = () => {
   return (
     <>
       <HeadingStar heading='Skills' />
-      <div className='flex flex-wrap gap-4 justify-center relative overflow-hidden py-5'>
+      <div className='flex flex-wrap gap-4 justify-center relative overflow-y-hidden py-5'>
         {data.map(({Icon, title, description}, i) => (
           <motion.div
             variants={variants}
