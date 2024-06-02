@@ -67,7 +67,7 @@ const Skills = () => {
             variants={variants}
             initial='initial'
             whileInView='animate'
-            viewport={{once: true}}
+            viewport={{once: true, margin: '-100px'}}
             custom={i}
             key={i}
             className='w-11/12 sm:w-[45%] md:w-[30%] bg-[#FFFFFF1A] rounded-lg p-5'
