@@ -8,8 +8,11 @@ import arrow_up from './assets/svgs/arrowup.svg';
 import Projects from './components/Projects';
 import Footer from './components/Footer';
 import Skills from './components/Skills';
+import {motion, useScroll} from 'framer-motion';
 
 function App() {
+  const {scrollYProgress} = useScroll();
+
   //Todo Create a state that tracks which element in view
   //Todo Pass this state into the Header
   const [scrolled, setScrolled] = useState(false);
@@ -28,6 +31,10 @@ function App() {
 
   return (
     <div className='w-screen min-w-[320px] max-w-[1700px] text-white mx-auto'>
+      <motion.div
+        className='progress-bar z-50'
+        style={{scaleX: scrollYProgress}}
+      />
       <button
         className={
           (scrolled ? 'flex' : 'hidden') +

@@ -138,3 +138,13 @@ a.contact {
     flex-direction: row-reverse;
   }
 }
+
+.progress-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: #9f40fe;
+  transform-origin: 0%;
+}
