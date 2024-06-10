@@ -1,5 +1,4 @@
 import {useEffect, useState} from 'react';
-// import {useInView} from 'framer-motion';
 import AboutMe from './components/AboutMe';
 import Hero from './components/Hero';
 import ContactMe from './components/ContactMe';
@@ -8,12 +7,17 @@ import arrow_up from './assets/svgs/arrowup.svg';
 import Projects from './components/Projects';
 import Footer from './components/Footer';
 import Skills from './components/Skills';
-import {motion, useScroll, useSpring} from 'framer-motion';
+import {motion, useScroll, useSpring, useTransform} from 'framer-motion';
 
 function App() {
   const {scrollYProgress} = useScroll();
-
   const scaleX = useSpring(scrollYProgress);
+
+  const background = useTransform(
+    scrollYProgress,
+    [0, 1],
+    ['#FF9900', '#9f40fe']
+  );
 
   //Todo Create a state that tracks which element in view
   //Todo Pass this state into the Header
@@ -33,7 +37,7 @@ function App() {
 
   return (
     <div className='w-screen min-w-[320px] max-w-[1700px] text-white mx-auto'>
-      <motion.div className='progress-bar z-50' style={{scaleX}} />
+      <motion.div className='progress-bar z-50' style={{scaleX, background}} />
       <button
         className={
           (scrolled ? 'flex' : 'hidden') +
