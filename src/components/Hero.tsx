@@ -53,7 +53,7 @@ export default memo(() => {
         alt='Michael'
         className='w-2/5 min-w-[350px] max-w-550px'
         variants={item}
-        transition={{duration: 1}}
+        transition={{duration: 0.5}}
         animate='visible'
         initial='hidden'
       />
