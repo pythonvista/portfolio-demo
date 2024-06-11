@@ -4,7 +4,7 @@ import Vector from '../assets/svgs/orange-star.svg';
 import TypingText from './TypingText';
 import {memo} from 'react';
 
-const item = {
+const textSection = {
   hidden: {y: 40, opacity: 0},
   visible: {
     y: 0,
@@ -19,7 +19,7 @@ export default memo(() => {
     <>
       <motion.div
         className='w-[95%] sm:w-3/5 relative'
-        variants={item}
+        variants={textSection}
         transition={{duration: 0.5}}
         animate='visible'
         initial='hidden'
@@ -50,12 +50,20 @@ export default memo(() => {
       {/* Change pic to me popping out the box  */}
       <motion.img
         src={Me}
-        alt='Michael'
+        alt='Skater'
         className='w-2/5 min-w-[350px] max-w-550px'
-        variants={item}
-        transition={{duration: 0.5}}
-        animate='visible'
-        initial='hidden'
+        transition={{
+          duration: 0.3,
+          ease: [0, 0.71, 0.2, 1.01],
+          scale: {
+            type: 'spring',
+            damping: 5,
+            stiffness: 100,
+            restDelta: 0.001
+          }
+        }}
+        animate={{opacity: 1, scale: 1}}
+        initial={{opacity: 0, scale: 0.5}}
       />
 
       <aside className='absolute -bottom-5 max-h-14 w-screen'>
