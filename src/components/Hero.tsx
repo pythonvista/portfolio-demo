@@ -1,5 +1,5 @@
 import {motion} from 'framer-motion';
-import Me from '../assets/images/hero-img.png';
+import skater from '../assets/images/hero-img.png';
 import Vector from '../assets/svgs/orange-star.svg';
 import TypingText from './TypingText';
 import {memo} from 'react';
@@ -40,7 +40,7 @@ export default memo(() => {
           className='contact p-2 rounded-[50px] flex items-center gap-2 w-max'
           href='#contact-me'
         >
-          <div className='w-12 h-10 rounded-full bg-[#FF9900]' />
+          <div className='w-10 h-10 rounded-full bg-[#FF9900]' />
           <div className='text-left text-sm pr-1'>
             <p className='font-semibold'>Email me</p>
             <p>damzymike@gmail.com</p>
@@ -49,7 +49,7 @@ export default memo(() => {
       </motion.div>
       {/* Change pic to me popping out the box  */}
       <motion.img
-        src={Me}
+        src={skater}
         alt='Skater'
         className='w-2/5 min-w-[350px] max-w-550px'
         transition={{
