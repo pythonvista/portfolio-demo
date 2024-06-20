@@ -4,6 +4,7 @@ import onstord from '../assets/images/onstord_preview.gif';
 import tobi from '../assets/images/tobi_preview.gif';
 import heartisan from '../assets/images/heartisan_preview.gif';
 import oculus from '../assets/images/oculus.gif';
+import merch from '../assets/images/merch-store.gif';
 import {motion} from 'framer-motion';
 
 type Project = {
@@ -14,6 +15,13 @@ type Project = {
 };
 
 const data: Project[] = [
+  {
+    imageSrc: merch,
+    title: 'Rhapsody Merch Store',
+    description:
+      'Web application for sale of customizable quality merch sweatshirts, round-necks, t-shirts and hoodies',
+    url: 'https://special-journey-psi.vercel.app'
+  },
   {
     imageSrc: tobi,
     title: 'Tobi Closet',
