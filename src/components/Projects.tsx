@@ -5,6 +5,7 @@ import tobi from '../assets/images/tobi_preview.gif';
 import heartisan from '../assets/images/heartisan_preview.gif';
 import oculus from '../assets/images/oculus.gif';
 import merch from '../assets/images/merch-store.gif';
+import medfest from '../assets/images/medfest.png';
 import {motion} from 'framer-motion';
 
 type Project = {
@@ -20,7 +21,14 @@ const data: Project[] = [
     title: 'Rhapsody Merch Store',
     description:
       'Web application for sale of customizable quality merch sweatshirts, round-necks, t-shirts and hoodies',
-    url: 'https://special-journey-psi.vercel.app'
+    url: 'https://merch-store-frontend.vercel.app'
+  },
+  {
+    imageSrc: medfest,
+    title: 'Medfest Care',
+    description:
+      'Saving for medical bills, Discovering health facilities near you and getting help from charitable individuals in the MFC community',
+    url: 'https://medfestcareng.vercel.app'
   },
   {
     imageSrc: tobi,
