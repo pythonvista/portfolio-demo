@@ -35,7 +35,7 @@ const data: Project[] = [
     title: 'Tobi Closet',
     description:
       'E-commerce web application for the sale of quality thrift clothing',
-    url: 'https://tc-comm-full.vercel.app'
+    url: 'https://store.tobicloset.com'
   },
   {
     imageSrc: onstord,
