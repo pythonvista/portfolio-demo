@@ -9,6 +9,7 @@ import Footer from './components/Footer';
 import Skills from './components/Skills';
 import {motion, useScroll, useSpring, useTransform} from 'framer-motion';
 
+//Todo Change name in index.html and hero section
 function App() {
   const {scrollYProgress} = useScroll();
   const scaleX = useSpring(scrollYProgress);
