@@ -22,7 +22,7 @@ const TypingText = () => {
         <span className='input-cursor'></span>
       </div> */}
       <h2 className='text-2xl sm:text-3xl lg:text-5xl font-bold my-4 sm:mb-8'>
-        Hi, I'm <strong className='text-[#85765F]'>Victor</strong> <br />
+        Hi, I'm <strong className='text-[#85765F]'>Michael</strong> <br />
         <div className='typing-container text-white'>
           <span id='sentence' className='sentence'>
             I'm a
