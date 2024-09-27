@@ -6,6 +6,7 @@ import heartisan from '../assets/images/heartisan_preview.gif';
 import oculus from '../assets/images/oculus.gif';
 import merch from '../assets/images/merch-store.gif';
 import medfest from '../assets/images/medfest.png';
+import mutual_gains from '../assets/images/mutual-gains.png';
 import {motion} from 'framer-motion';
 
 type Project = {
@@ -13,6 +14,7 @@ type Project = {
   title: string;
   description: string;
   url: string;
+  stacks?: [];
 };
 
 const data: Project[] = [
@@ -21,14 +23,7 @@ const data: Project[] = [
     title: 'Rhapsody Merch Store',
     description:
       'Web application for sale of customizable quality merch sweatshirts, round-necks, t-shirts and hoodies',
-    url: 'https://merch-store-frontend.vercel.app'
-  },
-  {
-    imageSrc: medfest,
-    title: 'Medfest Care',
-    description:
-      'Saving for medical bills, Discovering health facilities near you and getting help from charitable individuals in the MFC community',
-    url: 'https://medfestcareng.vercel.app'
+    url: 'https://merch-store.damzymike.com/'
   },
   {
     imageSrc: tobi,
@@ -36,6 +31,19 @@ const data: Project[] = [
     description:
       'E-commerce web application for the sale of quality thrift clothing',
     url: 'https://store.tobicloset.com'
+  },
+  {
+    imageSrc: mutual_gains,
+    title: 'Mutual Gains',
+    description: 'Sign up to mutual gains to earn cash as you refer friends',
+    url: 'https://mutual-gains.damzymike.com/'
+  },
+  {
+    imageSrc: medfest,
+    title: 'Medfest Care',
+    description:
+      'Saving for medical bills, Discovering health facilities near you and getting help from charitable individuals in the MFC community',
+    url: 'https://medfestcareng.vercel.app'
   },
   {
     imageSrc: onstord,
