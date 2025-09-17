@@ -4,10 +4,10 @@ import {Github, Mail, Phone, Whatsapp} from './SVGs';
 type Contact = {link: string; icon: React.FC<React.SVGProps<SVGSVGElement>>};
 
 const contacts: Contact[] = [
-  {link: 'https://wa.me/+2347033165100', icon: Whatsapp},
-  {link: 'tel:+2347033165100', icon: Phone},
-  {link: 'mailto:damzymike@gmail.com', icon: Mail},
-  {link: 'https://github.com/damzyEmeter', icon: Github}
+  {link: 'https://wa.me/+2348101074859', icon: Whatsapp},
+  {link: 'tel:+2348101074859', icon: Phone},
+  {link: 'mailto:emeterv18@gmail.com', icon: Mail},
+  {link: 'https://github.com/pythonvista', icon: Github}
 ];
 
 const Footer = () => {

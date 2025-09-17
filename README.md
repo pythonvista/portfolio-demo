@@ -20,6 +20,6 @@ E-commerce web application for the sale of quality thrift clothing
 
 ## Contact
 Feel free to reach out if you have any questions or would like to collaborate on a project.
-- Email: [damzymike@gmail.com]()
+- Email: [emeterv18@gmail.com]()
 - LinkedIn: [Your LinkedIn Profile]
 - Website: [Your Website or Portfolio URL]

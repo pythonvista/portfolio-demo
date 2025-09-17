@@ -43,7 +43,7 @@ export default memo(() => {
           <div className='w-10 h-10 rounded-full bg-[#FF9900]' />
           <div className='text-left text-sm pr-1'>
             <p className='font-semibold'>Email me</p>
-            <p>damzymike@gmail.com</p>
+            <p>emeterv18@gmail.com</p>
           </div>
         </a>
       </motion.div>
