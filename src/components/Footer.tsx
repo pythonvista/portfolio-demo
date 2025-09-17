@@ -7,7 +7,7 @@ const contacts: Contact[] = [
   {link: 'https://wa.me/+2347033165100', icon: Whatsapp},
   {link: 'tel:+2347033165100', icon: Phone},
   {link: 'mailto:damzymike@gmail.com', icon: Mail},
-  {link: 'https://github.com/damzymichael', icon: Github}
+  {link: 'https://github.com/damzyEmeter', icon: Github}
 ];
 
 const Footer = () => {
@@ -30,7 +30,7 @@ const Footer = () => {
         </div>
       </div>
       <p className='w-full text-sm sm:text-base text-center text-[#FFFFFF66] mb-3'>
-        Copywright &copy; {new Date().getFullYear()} | Michael Olofin
+        Copywright &copy; {new Date().getFullYear()} | Emeter Victor
       </p>
     </footer>
   );
